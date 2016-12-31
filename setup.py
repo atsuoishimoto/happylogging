@@ -21,5 +21,5 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    py_modules = ['happylogging']
+    packages=['happylogging'],
 )
