@@ -7,7 +7,7 @@ def read(fname):
 
 setup(
     name="happylogging",
-    version="0.0.1",
+    version="0.0.2",
     author="Atsuo Ishimoto",
     description="Utility functions to help using standard logging module.",
     license="MIT",
