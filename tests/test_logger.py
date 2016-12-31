@@ -72,7 +72,7 @@ def test_timed(tmpdir_factory):
 if sys.platform == 'darwin':
     sock = '/var/run/syslog'
 else:
-    sock = '/var/syslog'
+    sock = '/dev/log'
 
 def test_syslog():
     with unittest.mock.patch('logging.handlers.SysLogHandler') as m:

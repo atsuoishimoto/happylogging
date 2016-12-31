@@ -82,7 +82,7 @@ To logging to syslog server, you can use ``syslog`` to specify syslog servers as
 
 ::
 
-    initlog(syslog='/var/syslog, example:514', facility='syslog')   # Send to local port and host 'example'
+    initlog(syslog='/dev/log, example:514', facility='syslog')   # Send to local port and host 'example'
 
 ::
 
