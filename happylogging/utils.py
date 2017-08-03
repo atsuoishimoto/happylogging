@@ -61,6 +61,12 @@ def inject_logger_wrapper(ns, name):
     f.setcolor = g.setcolor = setcolor
 
 inject_logger_wrapper(logging.Logger, 'debug')
+inject_logger_wrapper(logging.Logger, 'info')
+inject_logger_wrapper(logging.Logger, 'warning')
+inject_logger_wrapper(logging.Logger, 'error')
+inject_logger_wrapper(logging.Logger, 'critical')
+inject_logger_wrapper(logging.Logger, 'exception')
+inject_logger_wrapper(logging.Logger, 'log')
 
 
 def inject_streamhandler_wrapper():
