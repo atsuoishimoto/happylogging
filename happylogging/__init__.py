@@ -5,26 +5,6 @@ import datetime
 import logging, logging.handlers
 from . import utils
 
-#level=debug
-#stream=stdout, stderr
-#file= ./abc, ./def  # comma separated list of output file
-#encoding=utf8
-#rotate=10mb midnight 1d
-#syslog=localhost:514, /dev/log
-#facility=syslog
-#format=
-
-#def setlevel(level)
-#
-#def fileconfig(level, filename, encoding, rotate):
-#
-#def streamconfig(level, stream);
-#
-#def syslogconfig(level, syslog, facility):
-#
-#def condig(listOfDict)
-#
-
 default_time = datetime.time(4, 0)
 
 def deleteHandlers(logger):
@@ -152,7 +132,7 @@ def initlog(
 
 HAPPY_ENV_VAR = 'HAPPY_CONSOLE_LOG_LEVEL'
 def configureDefaultLogger():
-    if not sys.stdout.isatty():
+    if not not hasattr(sys.stdout, 'isatty')  or not sys.stdout.isatty():
         return
     loglv = os.environ.get('HAPPY_CONSOLE_LOG_LEVEL')
     if loglv:

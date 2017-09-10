@@ -1,3 +1,4 @@
+import sys
 import logging
 import cProfile
 import functools
@@ -79,7 +80,7 @@ def inject_streamhandler_wrapper():
     @functools.wraps(org_format)
     def format(self, record):
         ret = org_format(self, record)
-        if self.stream.isatty():
+        if hasattr(sys.stdout, 'isatty') and self.stream.isatty():
             color = get_color(record.levelname.upper())
             if color:
                 ret = color+ret+'\033[0m'
